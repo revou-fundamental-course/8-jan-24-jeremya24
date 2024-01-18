@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik Kalkulator Matematik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <span class="logo">Katik</span> <span class="subtitle">Kalkulator Matematik</span>
+    </header>
+
+    <div class="container">
+        <h2>Pilih bentuk:</h2>
+        <select id="shapeSelect" onchange="changeShape()">
+            <option value="persegi">Persegi</option>
+            <option value="persegi-panjang">Persegi Panjang</option>
+        </select>
+
+        <div id="persegiContent">
+            <h2>Hitung Luas dan Keliling Persegi</h2>
+            <label for="sideLength">Panjang Sisi:</label>
+            <input type="number" id="sideLength" placeholder="Masukkan panjang sisi">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJoAAACUCAMAAABcK8BVAAAAY1BMVEX///8AAABWVlb4+PjY2Njh4eGNjY37+/vq6uqcnJx7e3sJCQnk5OTu7u0dHRzKyspHR0c5OTmHh4e0tLSkpKS8vLwSEhIiIiJeXl5BQUFQUFAyMjIpKSmqqqpycnHS0tJoaGiN9OpoAAACZUlEQVR4nO3c25KiMBSF4WxOARok4AlRad//KSeoPXplYI29q6drfRdWX2jlL0hy19sYIvqP1Mrr5V6V5zOWTdv4+3OexOdWZGzlsA5+tZCtQtCzUo7WdvLRhL64k0ij58mUZhKRLPC9tZN9olL0VymtMWeRwFOLy8+VdDpJX0o5rTuJQu+z2diL7HUPgn+h614OhX39tTExW5GNTtNdKc5vpNBeszJETmRQirrxadbER4leXm1l5T82ont/fKX1r/ZR7q6fOxkD7/2tuumE+ufx6s6tolMTm7hx7bFQCzPbvm0j1/YvT2ieVolPS6qqSrXCjJ2W82b/IE/VLH0M/pjqWXaNRj86bSxVuOVpu9xYBdOtsTTtI1/0A1jBNADTEExDMA3BNATTEExDMA3BNATTEExDMA3BNATTEExDMA3BNATTEExDMA3BNATTEExDMA3BNATTEExDMA3BNATTEExDMA3BNATTEExDMA3BNATTEExDMA3BNATTEExDMA3BNATTEExDMA3BNATTEL8rbac0rwj55/IuUxH9okEGP3j8Q5ooWlRGC1XNVao5Rsmv+Vmb4EWa+ovGZfvVqHTlGmO7k3TdUHTBpxHvpzlLmZyUtmfSyjTfJ44uwQlE9WpKq1pxCl3e4T47qRqDT+2WZkYRlVfaiJzvf81Ny5TGT/l1Zu+cR1p4+t6/s/7tzB6f9EgLDt97hyXr3NMuIt8Y9OD32uwBXLe0ZK81V6+Vw/W8peGtXe+kNGkk4bP8Hn6pPrXxNgrOxkqKYRh6N2qcgbvzxfWXLPwk6ryeKBQ92HrOnFCa5Q9E3y46ao4UTwAAAABJRU5ErkJggg==" alt="Square Image" class="shape-image">
+        </div>
+
+        <div id="persegiPanjangContent" style="display: none;">
+            <h2>Hitung Luas dan Keliling Persegi Panjang</h2>
+            <label for="length">Panjang:</label>
+            <input type="number" id="length" placeholder="Masukkan panjang">
+            <label for="width">Lebar:</label>
+            <input type="number" id="width" placeholder="Masukkan lebar">
+            <img src="data:image/png;base64,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" alt="Rectangle Image" class="shape-image">
+        </div>
+        <div id="formula">
+            <h3>Rumus:</h3>
+            <div id="formulaPersegi">
+                <p>Luas Persegi: L = s x s </p>
+                <p>Keliling Persegi: K = 4 x s </p>
+            </div>
+            <div id="formulaPersegiPanjang" style="display: none;">
+                <p>Luas Persegi Panjang: L = p x l</p>
+                <p>Keliling Persegi Panjang: K = 2(p + l)</p>
+            </div>
+        </div>
+        <button onclick="calculate()">Hitung</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

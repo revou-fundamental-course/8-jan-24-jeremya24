@@ -1,0 +1,114 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+}
+
+.subtitle {
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shape-image {
+    width: 200px;
+    max-width: 200px;
+    padding-left: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.rectangle-image {
+    width: 200px;
+    max-width: 200px;
+    padding-left: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+#formula {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+}
+
+#formula h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#formula p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#formulaPersegiPanjang {
+    display: none;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding-top: 15px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#persegiPanjangContent {
+    display: none;
+}
